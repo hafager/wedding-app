@@ -1,0 +1,79 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Håvard Magne Fagervoll">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Bryllup Greta og Steinar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+      <!-- Fontawesome for glyphicons -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'mainsite/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+  <header class="blog-header py-3">
+        <a href="/">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-6 text-center">
+            <img src="{% static 'img/gretaogsteinar.png' %}" class="img-gretaogsteinar">
+        </div>
+        <div class="col-6 text-center overskrift">
+            <h2>
+
+                Greta <i class="fas fa-heart wedding-heart"></i> Steinar
+            </h2>
+            <h4>
+                Randesund Kirke
+            </h4>
+        </div>
+
+    </div>
+        </a>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2 border-bottom">
+    <nav class="nav d-flex justify-content-between">
+        {% for page in nav_pages %}
+            <a class="p-2 text-muted" href="{{ page.path }}">{{ page.title }}</a>
+        {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-12 blog-main">
+
+    {% block content %}
+    {% endblock %}
+
+    </div><!-- /.blog-main -->
+  </div><!-- /.row -->
+</main><!-- /.container -->
+
+<footer class="wedding-footer container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wedding-footer-text">
+                <h4>Vi gleder oss!</h4>
+            </div>
+            </p>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+  </body>
+</html>

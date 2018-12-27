@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    <div class="wedding-post text-center">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.text|safe }}</p>
+        {% if page.picture_url %}
+            <img class="wedding-post-img" src="{{ page.picture_url }}" alt="related image">
+        {% endif %}
+      </div>
+{% endblock %}

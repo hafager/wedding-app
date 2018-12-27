@@ -1,0 +1,55 @@
+.img-gretaogsteinar {
+    max-width: 60%;
+    height: auto;
+}
+
+.overskrift h2{
+    color: black;
+    font-size: xx-large;
+}
+
+.overskrift h4{
+    color: black;
+    font-size: x-large;
+
+}
+
+.blog-header a:hover{
+    text-decoration: none;
+}
+
+.wedding-footer {
+    background: #292929;
+}
+.wedding-footer-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.wedding-heart{
+    color: red;
+}
+.wedding-post {
+    margin-bottom: 20px
+}
+.wedding-post-img {
+    width: 80%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .overskrift h4{
+        visibility: hidden;
+        display: none;
+    }
+    .overskrift h2{
+    position
+    }
+    .nav {
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float: none;
+        justify-conten
+    }
+}
