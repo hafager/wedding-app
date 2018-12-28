@@ -36,7 +36,8 @@
     width: 80%;
 }
 .wishlist-img {
-    width: 20%;
+    width: 300px;
+    object-fit: contain;
 }
 .wish-already-bought {
     color: red;
