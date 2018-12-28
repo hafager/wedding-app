@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from .models import Page
+from .models import Wishlist
 
 
 def home(request):
@@ -22,11 +23,12 @@ def info(request):
 
 
 def wishlist(request):
+    wishes = Wishlist.objects.all()
     nav_pages = Page.objects.not_hidden()
     page = nav_pages.filter(path='wishlist')
     if len(page) == 1:
         page = page[0]
-    return render(request, "mainsite/wishlist.html", {'nav_pages': nav_pages, 'page': page})
+    return render(request, "mainsite/wishlist.html", {'nav_pages': nav_pages, 'page': page, 'wishes': wishes})
 
 
 def location(request):

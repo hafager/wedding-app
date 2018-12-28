@@ -35,7 +35,12 @@
 .wedding-post-img {
     width: 80%;
 }
-
+.wishlist-img {
+    width: 20%;
+}
+.wish-already-bought {
+    color: red;
+}
 
 @media screen and (max-width: 600px) {
     .overskrift h4{
