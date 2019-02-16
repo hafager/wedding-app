@@ -43,6 +43,51 @@
     color: red;
 }
 
+.test {
+  font-family: "Verdana", Geneva, sans-serif;
+  font-size: 28px;
+  color: black;
+  margin-top: 20px;
+  padding-top: auto;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nav a:hover {
+  color: black;
+}
+
+.brand {
+  position:
+}
+.navn {
+  font-size: 40px;
+  font-weight: bold;
+}
+.heart-svg {
+  height: 52px;
+  color: red;
+  fill: red;
+}
+.tid-sted {
+
+}
+
+body {
+  background:url(../img/stupebrett.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  font-family: "Verdana", Geneva, sans-serif;
+}
+
+@font-face {
+  font-family: 'abc';
+  src: url('../static/fonts/WeddingChardonnay.ttf')  format("truetype"),
+       local('abc');
+}
+
 @media screen and (max-width: 600px) {
     .overskrift h4{
         visibility: hidden;

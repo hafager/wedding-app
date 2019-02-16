@@ -22,8 +22,8 @@
     <link href="{% static 'mainsite/style.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-  <header class="blog-header py-3">
+    <div class="container-fluid">
+  <!-- <header class="blog-header py-3">
         <a href="/">
     <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-6 text-center">
@@ -41,29 +41,49 @@
 
     </div>
         </a>
-  </header>
+  </header> -->
 
-  <div class="nav-scroller py-1 mb-2 border-bottom">
+  <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
+        <!-- <a class="p-2 test" href="">INFORMASJON</a>
+        <a class="p-2 text-muted test" href="">STED</a>
+        <a class="p-2 text-muted test" href="">GAVER</a>
+        <a class="p-2 text-muted test" href="">KONTAKT</a> -->
         {% for page in nav_pages %}
-            <a class="p-2 text-muted" href="{{ page.path }}">{{ page.title }}</a>
+            <a class="p-2 test" href="{{ page.path }}">{{ page.title }}</a>
         {% endfor %}
     </nav>
   </div>
 </div>
 
-<main role="main" class="container">
+<main role="main" class="container-fluid">
   <div class="row">
+    <div class="col-md-7">
+      
+    </div>
+    <div class="col-md-5">
+      <div class="brand">
+        <div class="navn">
+          GRETA
+          <img src="{% static 'img/heart.svg'%}" class="heart-svg" />
+          STEINAR
+      </div>
+      <div class="time-place">
+        3.8.2018 RANDESUND KIRKE
+      </div>
+      </div>
+    </div>
     <div class="col-md-12 blog-main">
 
-    {% block content %}
-    {% endblock %}
+    <!-- {% block content %}
+    {% endblock %} -->
+
 
     </div><!-- /.blog-main -->
   </div><!-- /.row -->
 </main><!-- /.container -->
 
-<footer class="wedding-footer container-fluid">
+<!-- <footer class="wedding-footer container-fluid">
     <div class="container">
         <div class="row">
             <div class="col-12 wedding-footer-text">
@@ -72,7 +92,7 @@
             </p>
         </div>
     </div>
-</footer>
+</footer> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
   </body>
