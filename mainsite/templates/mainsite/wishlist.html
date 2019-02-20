@@ -3,32 +3,34 @@
 
 
 {% block content %}
-    <div class="wedding-post">
+<div class="col-md-10 offset-md-1">
+    <div class="wedding-post text-main">
         <h1>{{ page.title }}</h1>
         <p>{{ page.text|safe }}</p>
         {% if page.picture_url %}
             <img class="wedding-post-img" src="{{ page.picture_url }}" alt="related image">
         {% endif %}
+        <div class="row mb-2">
+        {% for wish in wishes %}
+                <div class="col-md-12">
+                    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h3 class="mb-0">
+                                <a class="text-dark" href="#">{{ wish.title }}</a>
+                            </h3>
+                            {% if wish.already_bought %}
+                                <div class="mb-1 wish-already-bought">Allerede kjøpt.</div>
+                            {% endif %}
+                            <p class="card-text mb-auto">{{ wish.text|safe }}</p>
+                            <a href="{{ wish.url }}">Link til nettside</a>
+                        </div>
+                        <img class="bd-placeholder-img card-img-right flex-auto d-none d-lg-block wishlist-img" src="{{ wish.picture_url }}" alt="Bryllupønske">
+                    </div>
+                </div>
+        {% endfor %}
+        </div>
     </div>
 
-        <div class="row mb-2">
-    {% for wish in wishes %}
-            <div class="col-md-12">
-                <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-                    <div class="card-body d-flex flex-column align-items-start">
-                        <h3 class="mb-0">
-                            <a class="text-dark" href="#">{{ wish.title }}</a>
-                        </h3>
-                        {% if wish.already_bought %}
-                            <div class="mb-1 wish-already-bought">Allerede kjøpt.</div>
-                        {% endif %}
-                        <p class="card-text mb-auto">{{ wish.text|safe }}</p>
-                        <a href="{{ wish.url }}">Link til nettside</a>
-                    </div>
-                    <img class="bd-placeholder-img card-img-right flex-auto d-none d-lg-block wishlist-img" src="{{ wish.picture_url }}" alt="Bryllupønske">
-                </div>
-            </div>
-    {% endfor %}
-        </div>
 
+</div>
 {% endblock %}

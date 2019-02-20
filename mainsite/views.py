@@ -11,7 +11,7 @@ def home(request):
     page = pages.filter(path='home')
     if len(page) == 1:
         page = page[0]
-    return render(request, "mainsite/home.html", {'nav_pages': nav_pages, 'page': page})
+    return render(request, "mainsite/home.html", {'nav_pages': nav_pages})
 
 
 def info(request):
@@ -45,3 +45,11 @@ def contact(request):
     if len(page) == 1:
         page = page[0]
     return render(request, "mainsite/contact.html", {'nav_pages': nav_pages, 'page': page})
+
+
+def history(request):
+    nav_pages = Page.objects.not_hidden()
+    page = nav_pages.filter(path='history')
+    if len(page) == 1:
+        page = page[0]
+    return render(request, "mainsite/history.html", {'nav_pages': nav_pages, 'page': page})

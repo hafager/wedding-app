@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from .views import home, info, wishlist, location, contact
+from .views import home, info, wishlist, location, contact, history
 
 
 
@@ -9,5 +9,6 @@ urlpatterns = [
     url('info', info),
     url('wishlist', wishlist),
     url('location', location),
-    url('contact', contact)
+    url('contact', contact),
+    url('history', history)
 ]

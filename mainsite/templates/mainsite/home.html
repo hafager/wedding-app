@@ -1,13 +1,36 @@
 {% extends "base.html" %}
-
+{% load staticfiles%}
 
 
 {% block content %}
-    <div class="wedding-post text-center">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.text|safe }}</p>
-        {% if page.picture_url %}
-            <img class="wedding-post-img" src="{{ page.picture_url }}" alt="related image">
-        {% endif %}
-      </div>
+
+<div class="col-md-7">
+</div>
+
+<div class="col-md-5">
+  <div class="brand top-brand">
+    <div class="navn">
+      GRETA
+      <img src="{% static 'img/heart.svg'%}" class="heart-svg" />
+      STEINAR
+    </div>
+    <div class="time-place">
+      3.8.2018 RANDESUND KIRKE
+    </div>
+  </div>
+</div>
+<div class="col-md-12 bottom-brand">
+  <div class="brand">
+    <div class="navn">
+      GRETA
+      <img src="{% static 'img/heart.svg'%}" class="heart-svg" />
+      STEINAR
+    </div>
+    <div class="time-place">
+      3.8.2018 RANDESUND KIRKE
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}
