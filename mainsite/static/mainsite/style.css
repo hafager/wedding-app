@@ -60,14 +60,16 @@ justify-content: space-between;
     color: white;
 }
 .wedding-post {
-    margin-bottom: 20px
+    margin-bottom: 0px;
 }
 .wedding-post-img {
-    width: 80%;
+    width: 70%;
 }
 .wishlist-img {
     width: 300px;
+    height: 300px;
     object-fit: contain;
+    padding-right: 2em;
 }
 .wish-already-bought {
     color: red;
@@ -141,6 +143,22 @@ body {
     -webkit-background-size: cover;
     font-family: "Verdana", Geneva, sans-serif;
   }
+  .navbar {
+    padding: 0;
+    margin
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .navbar-brand {
+    margin-top: 10px;
+  }
+  .navbar-nav {
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+  }
   .bottom-brand {
     display: block;
   }
@@ -164,5 +182,10 @@ body {
   }
   .text-main {
     padding: 1em;
+    border-radius: 0em;
+  }
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
