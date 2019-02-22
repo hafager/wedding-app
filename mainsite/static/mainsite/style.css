@@ -26,7 +26,7 @@ justify-content: space-between;
 
 
 .text-main {
-  background-color: #fffcef;
+  background-color: #f9fcfc;
   padding: 5em;
   border-radius: 0.5em;
 }
@@ -109,7 +109,7 @@ justify-content: space-between;
   position: relative;
 }
 body {
-  background: url(../img/stupebrett.jpg) no-repeat center center fixed;
+  background: url(../img/stupebrett_fullhd.jpg) no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -136,7 +136,7 @@ body {
 
 @media screen and (max-width: 767px) {
   body {
-    background: url(../img/gretasteinarsol.jpg) no-repeat center center fixed;
+    background: url(../img/gretasteinarsol_scaled.jpg) no-repeat center center fixed;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
