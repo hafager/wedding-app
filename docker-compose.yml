@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "9000:9000"
+    volumes:
+    - ./db:/usr/src/app/db
+  haproxy:
+    build: ./haproxy/.
+    ports:
+    - "80:80"
+    - "443:443"
+    links:
+    - "web:wedding-web"
