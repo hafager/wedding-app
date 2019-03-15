@@ -108,15 +108,20 @@ justify-content: space-between;
   min-height: 100%;
   position: relative;
 }
-body {
-  background: url(../img/stupebrett_fullhd.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  font-family: "Verdana", Geneva, sans-serif;
+html, body {
+    height: 100%;
 }
-
+html {
+    overflow-y: hidden;
+}
+body {
+    overflow-y: scroll;
+}
+body {
+    background: url(../img/stupebrett_fullhd.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: "Verdana", Geneva, sans-serif;
+}
 @media screen and (max-width: 600px) {
     .overskrift h4{
         visibility: hidden;
@@ -130,18 +135,13 @@ body {
         display: table;
         table-layout: fixed;
         float: none;
-        justify-conten
+        justify-content: space-between;
     }
 }
 
 @media screen and (max-width: 767px) {
   body {
-    background: url(../img/gretasteinarsol_scaled.jpg) no-repeat center center fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    font-family: "Verdana", Geneva, sans-serif;
+      background: url(../img/gretasteinarsol_scaled.jpg) no-repeat center fixed;
   }
   .navbar {
     padding: 0;
@@ -172,6 +172,7 @@ body {
     top: auto;
     color: white;
     text-align: center;
+    z-index: -1;
   }
   .navn {
     font-size: 1.8em;
