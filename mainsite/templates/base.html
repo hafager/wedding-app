@@ -22,58 +22,38 @@
     <link href="{% static 'mainsite/style.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-  <header class="blog-header py-3">
-        <a href="/">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="col-6 text-center">
-            <img src="{% static 'img/gretaogsteinar.png' %}" class="img-gretaogsteinar">
-        </div>
-        <div class="col-6 text-center overskrift">
-            <h2>
-
-                Greta <i class="fas fa-heart wedding-heart"></i> Steinar
-            </h2>
-            <h4>
-                Randesund Kirke
-            </h4>
-        </div>
-
-    </div>
+    <div class="container-fluid">
+      <nav class="navbar navbar-light navbar-expand-md">
+        <a class="navbar-brand" href="/">
+          <img src="{% static 'img/heart.svg'%}" class="heart-svg" />
         </a>
-  </header>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            {% for page in nav_pages %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ page.path }}">{{ page.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
 
-  <div class="nav-scroller py-1 mb-2 border-bottom">
-    <nav class="nav d-flex justify-content-between">
-        {% for page in nav_pages %}
-            <a class="p-2 text-muted" href="{{ page.path }}">{{ page.title }}</a>
-        {% endfor %}
-    </nav>
-  </div>
-</div>
-
-<main role="main" class="container">
+<main role="main" class="container-fluid">
   <div class="row">
-    <div class="col-md-12 blog-main">
 
     {% block content %}
     {% endblock %}
+
 
     </div><!-- /.blog-main -->
   </div><!-- /.row -->
 </main><!-- /.container -->
 
-<footer class="wedding-footer container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 wedding-footer-text">
-                <h4>Vi gleder oss!</h4>
-            </div>
-            </p>
-        </div>
-    </div>
-</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+  </div>
   </body>
 </html>

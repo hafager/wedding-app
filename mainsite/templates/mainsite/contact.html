@@ -3,7 +3,8 @@
 
 
 {% block content %}
-    <div class="wedding-post">
+<div class="col-md-10 offset-md-1">
+    <div class="wedding-post text-main">
         <h1>{{ page.title }}</h1>
         <p>{{ page.text|safe }}</p>
         {% if page.picture_url %}
@@ -11,4 +12,5 @@
         {% endif %}
 
       </div>
+</div>
 {% endblock %}

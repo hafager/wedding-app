@@ -1,3 +1,36 @@
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-between;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 28px;
+  color: black;
+  opacity: 1;
+  margin-top: 20px;
+  padding-top: auto;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+.navbar-brand {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+.text-main {
+  background-color: #f9fcfc;
+  padding: 5em;
+  border-radius: 0.5em;
+}
+
 .img-gretaogsteinar {
     max-width: 60%;
     height: auto;
@@ -26,23 +59,69 @@
     margin-bottom: 10px;
     color: white;
 }
-.wedding-heart{
-    color: red;
-}
 .wedding-post {
-    margin-bottom: 20px
+    margin-bottom: 0px;
 }
 .wedding-post-img {
-    width: 80%;
+    width: 70%;
 }
 .wishlist-img {
     width: 300px;
+    height: 300px;
     object-fit: contain;
+    padding-right: 2em;
 }
 .wish-already-bought {
     color: red;
 }
 
+
+
+.brand {
+  position: absolute;
+  left: 5px;
+  top: 200px;
+}
+.navn {
+  font-size: 2.7em;
+  font-weight: bold;
+}
+.heart-svg {
+  height: 52px;
+  color: red;
+  fill: red;
+}
+.time-place {
+  letter-spacing: 0.3em;
+  font-size: 1.3em;
+}
+
+.bottom-brand {
+  display: none;
+}
+.background-overlay-123 {
+  background: rgba(12,34,56);
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+html, body {
+    height: 100%;
+}
+html {
+    overflow-y: hidden;
+}
+body {
+    overflow-y: scroll;
+}
+body {
+    background: url(../img/stupebrett_fullhd.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: "Verdana", Geneva, sans-serif;
+}
 @media screen and (max-width: 600px) {
     .overskrift h4{
         visibility: hidden;
@@ -56,6 +135,58 @@
         display: table;
         table-layout: fixed;
         float: none;
-        justify-conten
+        justify-content: space-between;
     }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+      background: url(../img/gretasteinarsol_scaled.jpg) no-repeat center fixed;
+  }
+  .navbar {
+    padding: 0;
+    margin
+  }
+  .navbar-toggler {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .navbar-brand {
+    margin-top: 10px;
+  }
+  .navbar-nav {
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+  }
+  .bottom-brand {
+    display: block;
+  }
+  .top-brand {
+    display: none;
+  }
+  .brand {
+    width: 100%;
+    position: fixed;
+    bottom: 2em;
+    top: auto;
+    color: white;
+    text-align: center;
+    z-index: -1;
+  }
+  .navn {
+    font-size: 1.8em;
+  }
+  .time-place {
+    letter-spacing: 0.24em;
+    font-size: 1em;
+  }
+  .text-main {
+    padding: 1em;
+    border-radius: 0em;
+  }
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }

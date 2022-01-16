@@ -1,13 +1,14 @@
-from django.conf.urls import url
+from django.urls import re_path
 
-from .views import home, info, wishlist, location, contact
+from .views import home, info, wishlist, location, contact, history
 
 
 
 urlpatterns = [
-    url('^$', home),
-    url('info', info),
-    url('wishlist', wishlist),
-    url('location', location),
-    url('contact', contact)
+    re_path('^$', home),
+    re_path('info', info),
+    re_path('wishlist', wishlist),
+    re_path('location', location),
+    re_path('contact', contact),
+    re_path('history', history)
 ]
