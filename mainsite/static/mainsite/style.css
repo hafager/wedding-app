@@ -6,7 +6,7 @@ display: flex;
 justify-content: space-between;
 }
 .navbar-light .navbar-nav .nav-link {
-  font-size: 28px;
+  font-size: 20px;
   color: black;
   opacity: 1;
   margin-top: 20px;
