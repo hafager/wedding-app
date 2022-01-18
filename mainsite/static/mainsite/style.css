@@ -86,10 +86,18 @@ justify-content: space-between;
   font-size: 2.7em;
   font-weight: bold;
 }
-.heart-svg {
+.navbar-svg {
+  fill: #ef6faa;
+}
+.name-symbol {
   height: 52px;
-  color: red;
-  fill: red;
+  vertical-align: sub;
+  fill: #ef6faa;
+}
+.name-symbol-mobile {
+  height: 52px;
+  vertical-align: middle;
+  fill: #ef6faa;
 }
 .time-place {
   letter-spacing: 0.3em;
@@ -120,8 +128,17 @@ body {
 body {
     background: url(../img/utsikt_oss.jpg) no-repeat center fixed;
     background-size: cover;
+    background-position: 55% 0%;
     font-family: "Verdana", Geneva, sans-serif;
 }
+
+
+@media screen and (max-width: 1900px) {
+  .brand {
+    color: white;
+  }
+}
+
 @media screen and (max-width: 600px) {
     .overskrift h4{
         visibility: hidden;
@@ -139,9 +156,11 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   body {
-      background: url(../img/tur.jpg) no-repeat center fixed;
+      background: url(../img/utsikt_oss.jpg) no-repeat center;
+      background-size: cover;
+      background-position: 55% 0%;
   }
   .navbar {
     padding: 0;
