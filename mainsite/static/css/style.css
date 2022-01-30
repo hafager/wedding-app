@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Rainy Days";
+  src: url('/static/fonts/RainyDays.ttf');
+}
+
 .navbar-nav,
 .mr-auto {
 flex: 1;
@@ -81,23 +86,24 @@ justify-content: space-between;
   position: absolute;
   left: 5px;
   top: 200px;
+  font-family: "Rainy Days";
 }
 .navn {
   font-size: 2.7em;
   font-weight: bold;
 }
 .navbar-svg {
-  fill: #ef6faa;
+  fill: #c85e72;
 }
 .name-symbol {
   height: 52px;
   vertical-align: sub;
-  fill: #ef6faa;
+  fill: #c85e72;
 }
 .name-symbol-mobile {
   height: 52px;
   vertical-align: middle;
-  fill: #ef6faa;
+  fill: #c85e72;
 }
 .time-place {
   letter-spacing: 0.3em;
