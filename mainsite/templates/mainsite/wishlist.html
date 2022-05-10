@@ -22,9 +22,17 @@
                                 <div class="mb-1 wish-already-bought">Allerede kjøpt.</div>
                             {% endif %}
                             <p class="card-text mb-auto">{{ wish.text|safe }}</p>
+
+                            {% if wish.url %}
                             <a href="{{ wish.url }}">Link til nettside</a>
+			    {% endif %}
                         </div>
+
+                        {% if wish.picture_url %}
                         <img class="flex-auto d-none d-lg-block wishlist-img" src="{{ wish.picture_url }}" alt="Bryllupønske">
+			{% else %}
+                        <img class="flex-auto d-none d-lg-block wishlist-img" src="/static/img/present.png" alt="Bryllupønske">
+			{% endif %}
                     </div>
                 </div>
         {% endfor %}
