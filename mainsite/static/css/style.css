@@ -137,6 +137,18 @@ body {
     background-position: 55% 0%;
     font-family: "Gill Sans", sans-serif;
 }
+.content-row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.content-col {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
 
 
 @media screen and (max-width: 1900px) {
@@ -151,7 +163,6 @@ body {
         display: none;
     }
     .overskrift h2{
-    position
     }
     .nav {
         margin: 0 auto;
@@ -170,7 +181,6 @@ body {
   }
   .navbar {
     padding: 0;
-    margin
   }
   .navbar-toggler {
     margin-right: 20px;
@@ -209,10 +219,6 @@ body {
   .text-main {
     padding: 1em;
     border-radius: 0em;
-  }
-  .container-fluid {
-    padding-right: 0px;
-    padding-left: 0px;
   }
 }
 

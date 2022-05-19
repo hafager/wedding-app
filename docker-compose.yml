@@ -2,9 +2,6 @@ version: '3'
 services:
   web:
     build: .
-    environment:
-      - VIRTUAL_ENV=/env
-      - PATH=/env/bin:$PATH
     volumes:
     - ./db:/app/db
     - static_volume:/static
