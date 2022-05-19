@@ -29,6 +29,17 @@ sudo docker run -p 9000:9000 -d wedding
 sudo docker run -p 9000:9000 -v /FULL/PATH/wedding-app/db:/usr/src/app/db -d wedding
 ```
 
+```
+docker-compose up -d --build
+```
+
+
+
+### Create staticfiles
+```
+docker-compose run web /app/manage.py collectstatic --no-input
+```
+
 ### Development
 Copy in /migrations/  
 Change in settings.py  

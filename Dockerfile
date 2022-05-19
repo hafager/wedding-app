@@ -1,20 +1,17 @@
 FROM python:3.8
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        apache2
-#        postgresql-client \
-#    && rm -rf /var/lib/apt/lists/*
+ADD requirements.txt /app/requirements.txt
 
-COPY httpd.conf /etc/apache2/conf-enabled/
+RUN python -m venv /env \
+    && /env/bin/pip install --upgrade pip \
+    && /env/bin/pip install --no-cache-dir -r /app/requirements.txt
 
-WORKDIR /usr/src/app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-
-COPY ./mainsite ./mainsite
-COPY ./wedding_site ./wedding_site
-COPY manage.py .
+ADD manage.py /app/manage.py
+ADD mainsite /app/mainsite
+WORKDIR /app
 
 EXPOSE 9000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:9000"]
+
+ADD startup.sh .
+
+CMD ["./startup.sh"]
